@@ -34,6 +34,47 @@ public static void Fibonacci(int n)
     }
 }
 
+//EJERCICIO3
+
+public static int CalcularNotacionPolacaInversa(string expresion)
+{
+    Stack<int> pila = new Stack<int>();
+    string[] tokens = expresion.Split(' ');
+
+    foreach (string token in tokens)
+    {
+        if (int.TryParse(token, out int numero))
+        {
+            pila.Push(numero);
+        }
+        else
+        {
+            int operando2 = pila.Pop();
+            int operando1 = pila.Pop();
+
+            switch (token)
+            {
+                case "+":
+                    pila.Push(operando1 + operando2);
+                    break;
+                case "-":
+                    pila.Push(operando1 - operando2);
+                    break;
+                case "*":
+                    pila.Push(operando1 * operando2);
+                    break;
+                case "/":
+                    pila.Push(operando1 / operando2);
+                    break;
+                default:
+                    throw new ArgumentException($"Operador no válido: {token}");
+            }
+        }
+    }
+
+    return pila.Pop();
+}
+
 //EJERCICIO4
 
 public static void CalcularEcuacionCuadratica(double a, double b, double c)
