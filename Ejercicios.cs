@@ -64,23 +64,23 @@ public static void CalcularIMC(double peso, double estatura)
     {
         Console.WriteLine("Peso bajo");
     }
-    else if (imc < 25)
+    else if (imc>18 && imc < 24.9)
     {
         Console.WriteLine("Peso normal");
     }
-    else if (imc < 27)
+    else if (imc >25 && imc < 26.9)
     {
         Console.WriteLine("Sobrepeso");
     }
-    else if (imc < 30)
+    else if (imc > 27)
     {
         Console.WriteLine("Obesidad");
     }
-    else if (imc < 35)
+    else if (imc >27 && imc < 29.9)
     {
-        Console.WriteLine("Obesidad de tipo I");
+        Console.WriteLine("Obesidad grado I");
     }
-    else if (imc > 40)
+    else if (imc > 30 && imc < 39.9)
     {
         Console.WriteLine("Obesidad de tipo II");
     }
