@@ -34,6 +34,8 @@ public static void Fibonacci(int n)
     }
 }
 
+//EJERCICIO4
+
 public static void CalcularEcuacionCuadratica(double a, double b, double c)
 {
     double discriminante = b * b - 4 * a * c;
@@ -54,6 +56,8 @@ public static void CalcularEcuacionCuadratica(double a, double b, double c)
         Console.WriteLine($"Las soluciones son x1 = {x1} y x2 = {x2}");
     }
 }
+
+//EJERCICIO5
 
 public static void CalcularIMC(double peso, double estatura)
 {
